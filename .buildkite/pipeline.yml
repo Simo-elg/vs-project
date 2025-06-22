@@ -1,0 +1,6 @@
+steps:
+  - label: ":npm: Installation"
+    command: npm install
+
+  - label: ":test_tube: Tests React"
+    command: npm test -- --watchAll=false
