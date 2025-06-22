@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "vitest run --reporter verbose --silent=false",
+    "test": "vitest run --reporter verbose --silent=false --passWithNoTests=false",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
