@@ -8,5 +8,8 @@ function Hello() {
 
 test('affiche un message', () => {
     render(<Hello />);
-    expect(screen.getByText('Bonjour, Simo')).toBeInTheDocument();
+    const res = screen.getByText('Bonjour, Simo');
+    console.log('Le composant contient :', res.textContent);
+    // Vérifie que le texte est bien dans le document
+    expect(res).toBeInTheDocument();
 } );
