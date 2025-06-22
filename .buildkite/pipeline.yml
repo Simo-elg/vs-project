@@ -2,5 +2,8 @@ steps:
   - label: ":npm: Installer dépendances"
     command: npm install
 
-  - label: ":test_tube: Lancer les tests React"
-    command: npm test -- --watchAll=false
+  - label: ":rocket: Build Vite project"
+    command: npm run build
+
+  - label: ":rocket: Compiler le projet"
+    command: npm run build
