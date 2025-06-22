@@ -8,5 +8,6 @@ steps:
   - label: ":rocket: Test"
     commands:
       - npm ci
-      - npx vitest run --reporter verbose --silent=false --passWithNoTests=false || exit 1
+      - npx vitest run 
+      - if %ERRORLEVEL% NEQ 0 exit /b %ERRORLEVEL%
     depends_on: build

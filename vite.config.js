@@ -7,4 +7,8 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     react()],
+    test: {
+      environment: 'jsdom', // très important pour tester les composants React
+      globals: true          // expose `expect`, `test`, etc. sans les importer
+  }
 })
