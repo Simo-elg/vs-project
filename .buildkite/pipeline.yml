@@ -1,9 +1,13 @@
 steps:
   - label: ":npm: Installer dépendances"
+    key: dep
     command: npm install
 
   - label: ":rocket: Build Vite project"
-    command: npm run build
+    key: build
+    depends_on: dep
+    command: npx vite build
 
   - label: ":rocket: Compiler le projet"
+    depends_on: build
     command: npm run build
