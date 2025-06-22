@@ -9,6 +9,7 @@ function Hello() {
 test('affiche un message', () => {
     render(<Hello />);
     const res = screen.getByText('Bonjour, Simo');
+    console.log('res:', res);
     console.log('Le composant contient :', res.textContent);
     // Vérifie que le texte est bien dans le document
     expect(res).toBeInTheDocument();
