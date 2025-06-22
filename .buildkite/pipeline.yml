@@ -3,3 +3,8 @@ steps:
     commands:
       - npm ci
       - npm run build
+    key: build
+  
+  - label: ":rocket: Test"
+    command: npm run Test
+    depends_on: build
